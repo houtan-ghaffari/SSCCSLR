@@ -46,7 +46,7 @@ def get_rot_model():
     shared_x = layers.LeakyReLU(name='act_2')(shared_x)
     shared_x = layers.Dropout(0.25, name='drop_1')(shared_x)
     
-    # head 1 --> reconstruction task
+    # head 1 --> rotation task
     rot_x = layers.Dense(1, activation='sigmoid', name='rotation')(shared_x)
 
     # head 2 --> classifier
